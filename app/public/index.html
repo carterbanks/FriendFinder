@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friends Finder</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class=" image-bg col-lg-12">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Even crazy cat ladies can be selective when it comes to bringing home a new pal!</h2>
+                <h2>Take the survey to find the best feline friend for you!</h2>
+                <br>
+
+                <!-- <div class="text-center push-to-bottom">
+                    <button class="btn btn-warning btn-xs theme-button">
+                        <span class="glyphicon glyphicon-music"></span> Play Song</button>
+                    <button class="btn btn-default btn-xs pause-button">
+                        <span class="glyphicon glyphicon-pause"></span> Pause Song</button>
+                </div> -->
+        
+                <div>
+                    <a href="/survey">
+                        <button type="button" class="btn btn-lg btn-info">
+                            <h4>
+                                <span class="glyphicon glyphicon-thumbs-up"></span> Let's go</h4>
+                        </button>
+                    </a>
+                </div>
+        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Current Feline Friends -->
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Feline Friends</h4>
+                    </div>
+                    <div class="panel-body" id="tableSection">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer class="col-lg-12 footer">
+            <div class="container">
+                <p>
+                    <a href="/survey">Survey</a> |
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/carterbanks/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+<script type="text/javascript">
+
+        // Play and Pause Song
+        var audioElement = document.createElement("audio");
+        audioElement.setAttribute("src", "song.mp3");
+
+            // Play Song
+                $(".theme-button").on("click", function () {
+                    audioElement.play();
+                });
+                // Pause Song
+                $(".pause-button").on("click", function () {
+                    audioElement.pause();
+                });
+
+    function friendsTable() {
+
+        // Here we get the location of the root page.
+        // We use this instead of explicitly saying the URL is localhost:3000 because the url will change when we deploy.
+        var currentURL = window.location.origin;
+
+        $.ajax({
+                url: currentURL + "/api/friends",
+                method: "GET"
+            })
+            .done(function (data) {
+
+                console.log("------------------------------------");
+                console.log("URL: " + currentURL + "/api/friends");
+                console.log("------------------------------------");
+
+                console.log(data);
+                console.log("------------------------------------")
+
+                for (var i = 0; i < data.length; i++) {
+
+                    var tableSection = $("<div class=col-xs-4 col-md-3>");
+                    tableSection.addClass('well');
+                    tableSection.attr('id', 'tableWell-' + i + 1);
+                    $('#tableSection').append(tableSection);
+
+                    var generic = "default.png";
+
+                    if (data[i].photo === "n/a" || data[i].photo === "") {
+                        $('#tableWell-' + i + 1).append('<h2>' + data[i].name +
+                            '</h2>' + '<p><img class="img-thumbnail" style="width:250px;height:300px;"  src= ' +
+                            generic + ">");
+
+                    } else {
+                        $('#tableWell-' + i + 1).append('<h2>' + data[i].name +
+                            '</h2>' + '<p><img class="img-thumbnail" style="width:250px;height:300px;"  src= ' +
+                            data[i].photo + ">");
+
+                    }
+                }
+            });
+    }
+    friendsTable(); 
+</script>
+
+</html>

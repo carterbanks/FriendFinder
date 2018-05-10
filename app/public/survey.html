@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friends Finder</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class=" image-bg col-lg-12">
+        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+        
+                <h2>Survey Questions </h2>
+                <h2>Answer the questions below to find a feline friend!</h2>
+                <br>
+        
+                <div>
+                    <a href="/">
+                        <button type="button" class="btn btn-lg btn-danger">
+                            <h4>
+                                <span class="glyphicon glyphicon-home"></span> Home</h4>
+                        </button>
+                    </a>
+                </div>
+        
+            </div>
+        </div>
+
+        <h3>
+            <strong>About You</strong>
+        </h3>
+        <h4>Name (Required)</h4>
+        <input type="text" id="name" class="form-control panel-default" required>
+
+        <h4>Link to Photo Image (type in n/a if no photo available)</h4>
+        <input type="text" id="photo" class="form-control panel-default">
+
+        <hr>
+
+        <h3>
+            <strong>Question 1</strong>
+        </h3>
+        <h4>You enjoy spending time on the couch and don't mind a furry friend in your lap.</h4>
+        <select class="form-control chosen-select" id="q1">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3>
+            <strong>Question 2</strong>
+        </h3>
+        <h4>You are easily upset if your feline friend declines your belly rub.</h4>
+        <select class="form-control chosen-select" id="q2">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h3>
+            <strong>Question 3</strong>
+        </h3>
+        <h4>Your current cat family takes well to newcomers!</h4>
+        <select class="form-control chosen-select" id="q3">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h3>
+            <strong>Question 4</strong>
+        </h3>
+        <h4>You think the act of 'making biscuits' is adorable.</h4>
+        <select class="form-control chosen-select" id="q4">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h3>
+            <strong>Question 5</strong>
+        </h3>
+        <h4>You are a firm believer in the practice of declawing.</h4>
+        <select class="form-control chosen-select" id="q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h3>
+            <strong>Question 6</strong>
+        </h3>
+        <h4>A beautiful coat of fur is important to you.</h4>
+        <select class="form-control chosen-select" id="q6">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h3>
+            <strong>Question 7</strong>
+        </h3>
+        <h4>If your feline friend brought you a small animal (potentially deceased) as a gift, you would appreciate it.</h4>
+        <select class="form-control chosen-select" id="q7">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3>
+            <strong>Question 8</strong>
+        </h3>
+        <h4>You have no qualms about cleaning a litter box.</h4>
+        <select class="form-control chosen-select" id="q8">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3>
+            <strong>Question 9</strong>
+        </h3>
+        <h4>You enjoy the possibility of your feline friend reproducing one day.</h4>
+        <select class="form-control chosen-select" id="q9">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3>
+            <strong>Question 10</strong>
+        </h3>
+        <h4>You prefer your feline friends to be calm and mellow as opposed to wild and adventurous.</h4>
+        <select class="form-control chosen-select" id="q10">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Submit</button>
+
+        <hr>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/">Home</a> |
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/carterbanks/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">
+                        <strong>This Feline Friend is the One For You!</strong>
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img class="img-thumbnail" style="width:250px;height:300px;" id="match-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    // Play and Pause Song
+    // var audioElement = document.createElement("audio");
+    // audioElement.setAttribute("src", "song.mp3");
+
+    
+
+    $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+
+            if (validateForm()) {
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                console.log(newFriend);
+
+                $.post("/api/friends", newFriend, function (data) {
+                    console.log(data);  
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+
+                    // Show the modal with the best match
+                    $("#results-modal").modal("toggle");
+                    audioElement.play();
+                });
+
+                $(".close").on("click", function (event) {
+                    audioElement.pause();   
+                });
+                
+                $("#name").val("");
+                $("#photo").val("");
+                $("#q2").val("");
+                $("#q1").val("");
+                $("#q3").val("");
+                $("#q4").val("");
+                $("#q5").val("");
+                $("#q6").val("");
+                $("#q7").val("");
+                $("#q8").val("");
+                $("#q9").val("");
+                $("#q10").val("");
+
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+        });
+    </script>
+</body>
+
+</html>

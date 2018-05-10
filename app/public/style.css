@@ -1,0 +1,24 @@
+body {
+    background-color: #c1c5c8;
+}
+
+.jumbotron {
+   background-color: #c1c5c8;
+   padding:0;   
+}
+
+.image-bg {
+    height: 200px;
+    background: url("logo.png") no-repeat center center;
+    background-size: 100%;
+}
+
+button {
+    margin: 10px;   
+}
+h2 {
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+h3, h4, p, option, strong {
+    font-family: 'Open Sans', sans-serif;
+}
